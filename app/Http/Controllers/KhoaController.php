@@ -47,10 +47,10 @@ class KhoaController extends Controller
     }
 
 
-    public function update(Request $request, Khoa $khoa)
+    public function update(Request $request, $id)
     {
         $khoa                           = Khoa::where('ma_khoa', $id)->first();
-        $khoa->ma_khoa                  = $request->get('ma_khoa');
+       
         $khoa->ten_khoa                 = $request->get('ten_khoa');
         $khoa->thoi_gian_bat_dau        = $request->get('thoi_gian_bat_dau');
         $khoa->thoi_gian_ket_thuc       = $request->get('thoi_gian_ket_thuc');
