@@ -34,9 +34,10 @@ class KhoaController extends Controller
     }
 
 
-    public function show(Khoa $khoa)
+    public function show($id)
     {
-        //
+        $khoa = Khoa::find($id);
+        return $khoa->ten_khoa;
     }
 
 

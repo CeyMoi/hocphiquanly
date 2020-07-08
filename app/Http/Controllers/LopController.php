@@ -13,9 +13,9 @@ class LopController extends Controller
     {
         $ten_lop   = $request->get('ten_lop');
         $array_lop = Lop::where('ten_khoa', 'like', "%$ten_lop%")
-        ->join('khoa', 'khoa.ma_khoa', 'lop.ma_khoa')
-        ->join('chuong_trinh_dao_tao', 'chuong_trinh_dao_tao.ma_nganh', 'lop.ma_nganh')
-        ->paginate(2);
+            ->join('khoa', 'khoa.ma_khoa', 'lop.ma_khoa')
+            ->join('chuong_trinh_dao_tao', 'chuong_trinh_dao_tao.ma_nganh', 'lop.ma_nganh')
+            ->paginate(2);
         return view('lop.index', compact('array_lop', 'ten_lop'));
     }
 
