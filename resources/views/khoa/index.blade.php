@@ -20,7 +20,7 @@
 		<th>Mã khóa</th>
 		<th>Tên khóa</th>
 		<th>Thời gian bắt đầu</th>
-		<th>Thời gian kết thúc</th>
+		<!-- <th>Thời gian kết thúc</th> -->
 
 		<th>Xem</th>
 		<th>Sửa</th>
@@ -41,9 +41,9 @@
 			{{$khoa->thoi_gian_bat_dau}}
 		</td>
 
-		<td>
+		<!-- <td>
 			{{$khoa->thoi_gian_ket_thuc}}
-		</td>
+		</td> -->
 
 
 

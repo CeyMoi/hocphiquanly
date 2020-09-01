@@ -8,7 +8,7 @@ Route::resource('lop', 'LopController');
 
 Route::resource('sinh_vien', 'SinhVienController');
 
-Route::any('hoc_phi', 'HocPhiController@getHocPhi');
+Route::any('hoc_phi', 'HocPhiController@getHocPhi')->name('hoc_phi.index');
 
 Route::resource('hoa_don', 'HoaDonController');
 

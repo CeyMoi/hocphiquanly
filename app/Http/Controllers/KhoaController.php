@@ -12,8 +12,9 @@ class KhoaController extends Controller
     public function index(Request $request)
     {
         $ten_khoa   = $request->get('ten_khoa');
-        $array_khoa = Khoa::where('ten_khoa', 'like', "%$ten_khoa%")->paginate(2);
-        return view('khoa.index', compact('array_khoa', 'ten_khoa'));
+        $array_khoa = Khoa::where('ten_khoa', 'like', "%$ten_khoa%")->paginate(3);
+        $title = 'Xem tất cả Khóa';
+        return view('khoa.index', compact('array_khoa', 'ten_khoa', 'title'));
     }
 
 
@@ -51,7 +52,7 @@ class KhoaController extends Controller
     public function update(Request $request, $id)
     {
         $khoa                           = Khoa::where('ma_khoa', $id)->first();
-       
+
         $khoa->ten_khoa                 = $request->get('ten_khoa');
         $khoa->thoi_gian_bat_dau        = $request->get('thoi_gian_bat_dau');
         $khoa->thoi_gian_ket_thuc       = $request->get('thoi_gian_ket_thuc');

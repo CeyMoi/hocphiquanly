@@ -59,49 +59,42 @@
                         </p>
                     </a>
                 </li> -->
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Chọn mục
-                            <i class="fas fa-angle-left right"></i>
-                            <!-- <span class="badge badge-info right">6</span> -->
-                        </p>
+                <li class="nav-item">
+                    <a href="{{route('khoa.index')}}" class="nav-link @if(Route::is('khoa.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Khóa</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('khoa.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Khóa</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('chuong_trinh_dao_tao.index')}}"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Chương trình đào tạo</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('lop.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Lớp</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('sinh_vien.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Sinh viên</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('hoa_don.create')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Xử lý học phí</p>
-                            </a>
-                        </li>
-                       
-                       
-                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('chuong_trinh_dao_tao.index')}}" class="nav-link @if(Route::is('chuong_trinh_dao_tao.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Chương trình đào tạo</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('lop.index')}}" class="nav-link @if(Route::is('lop.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Lớp</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('sinh_vien.index')}}" class="nav-link @if(Route::is('sinh_vien.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Sinh viên</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('hoa_don.create')}}" class="nav-link @if(Route::is('hoa_don.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Xử lý học phí</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('hoc_phi.index')}}" class="nav-link @if(Route::is('hoc_phi.*')) active @endif">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Học phí</p>
+                    </a>
                 </li>
                 <!-- <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">

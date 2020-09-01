@@ -15,8 +15,9 @@ class LopController extends Controller
         $array_lop = Lop::where('ten_khoa', 'like', "%$ten_lop%")
             ->join('khoa', 'khoa.ma_khoa', 'lop.ma_khoa')
             ->join('chuong_trinh_dao_tao', 'chuong_trinh_dao_tao.ma_nganh', 'lop.ma_nganh')
-            ->paginate(2);
-        return view('lop.index', compact('array_lop', 'ten_lop'));
+            ->paginate(10);
+        $title = 'Xem tất cả Lớp';
+        return view('lop.index', compact('array_lop', 'ten_lop', 'title'));
     }
 
 

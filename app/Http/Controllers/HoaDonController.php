@@ -27,22 +27,7 @@ class HoaDonController extends Controller
         $hoa_don->thang_hoc_phi       = $request->get('thang_hoc_phi');
         $hoa_don->nam_hoc_phi         = $request->get('nam_hoc_phi');
         $hoa_don->so_tien_dong        = $request->get('so_tien_dong');
-        $hoa_don->ngay_dong           = $request->get('ngay_dong');
         $hoa_don->ma_ke_toan          = $request->get('ma_ke_toan');
         $hoa_don->save();
-    }
-
-
-    public function show($id)
-    {
-        //
-    }
-
-
-
-
-    public function update(Request $request, $id)
-    {
-        //
     }
 }

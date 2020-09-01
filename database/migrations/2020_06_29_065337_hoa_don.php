@@ -18,11 +18,11 @@ class HoaDon extends Migration
 
             $table->string('so_tien_dong', 100);
 
-            $table->date('ngay_dong');
+            $table->timestamp('ngay_dong');
 
             $table->integer('ma_ke_toan')->unsigned();
 
-            $table->primary(['ma_sinh_vien', 'thang_hoc_phi', 'nam_hoc_phi']);
+            $table->primary('ngay_dong');
 
             $table->foreign('ma_ke_toan')
                 ->references('ma_ke_toan')->on('ke_toan');

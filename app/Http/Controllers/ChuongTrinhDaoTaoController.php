@@ -11,7 +11,7 @@ class ChuongTrinhDaoTaoController extends Controller
     public function index(Request $request)
     {
         $ten_nganh   = $request->get('ten_nganh');
-        $array_chuong_trinh_dao_tao = ChuongTrinhDaoTao::where('ten_nganh', 'like', "%$ten_nganh%")->paginate(2);
+        $array_chuong_trinh_dao_tao = ChuongTrinhDaoTao::where('ten_nganh', 'like', "%$ten_nganh%")->paginate(10);
         return view('chuong_trinh_dao_tao.index', compact('array_chuong_trinh_dao_tao', 'ten_nganh'));
     }
 
@@ -48,7 +48,7 @@ class ChuongTrinhDaoTaoController extends Controller
     public function update(Request $request, $id)
     {
         $chuong_trinh_dao_tao                       = ChuongTrinhDaoTao::where('ma_nganh', $id)->first();
-    
+
         $chuong_trinh_dao_tao->ten_nganh            = $request->get('ten_nganh');
         $chuong_trinh_dao_tao->hoc_phi_theo_thang   = $request->get('hoc_phi_theo_thang');
         $chuong_trinh_dao_tao->save();

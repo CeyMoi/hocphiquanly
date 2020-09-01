@@ -34,7 +34,8 @@
 
     Mã lớp <input type="text" name="ma_lop" class="form-control">
     <br>
-    Thời gian nhập học <input type="date" name="thoi_gian_nhap_hoc" >
+    Thời gian nhập học <input type="date" name="thoi_gian_nhap_hoc">
+    <br>
     <button class="btn btn-primary">Sửa</button>
 </form>
 @endsection

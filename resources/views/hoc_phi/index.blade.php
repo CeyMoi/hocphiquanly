@@ -10,8 +10,8 @@
              <th>Mã lớp</th>
              <th>số tháng đã học</th>
              <th>tổng tiền phải đóng</th>
-             <th>Mã khóa</th>
-             <th>Mã Ngành</th>
+             <!-- <th>Mã khóa</th>
+             <th>Mã Ngành</th> -->
              <th>Học phí phải đóng theo tháng</th>
              <th>Số tiền đã đóng</th>
              <th>Tình trạng</th>
@@ -45,13 +45,13 @@
              {{$each->tong_tien_dong}}
          </td>
 
-         <td>
+         <!-- <td>
              {{$each->ma_khoa}}
          </td>
 
          <td>
              {{$each->ma_nganh}}
-         </td>
+         </td> -->
 
          <td>
              {{$each->hoc_phi_theo_thang}}

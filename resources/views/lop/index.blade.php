@@ -11,7 +11,7 @@
 <a href="{{route('lop.create')}}" class="btn btn-primary">
     Thêm
 </a>
-<table class="table table-hover" >
+<table class="table table-hover">
     <tr>
         <th>Mã lớp</th>
         <th>Tên lớp</th>
