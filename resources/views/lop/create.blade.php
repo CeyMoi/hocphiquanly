@@ -11,7 +11,7 @@
     Mã khóa <input type="text" name="ma_khoa" class="form-control">
     <br>
     Mã ngành <input type="text" name="ma_nganh" class="form-control">
-
+    <br>    
 
     <button class="btn btn-primary">Thêm</button>
 </form>

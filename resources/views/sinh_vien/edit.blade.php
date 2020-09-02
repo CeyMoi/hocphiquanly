@@ -13,8 +13,8 @@
     <br>
     Tên sinh viên <input type="text" name="ten_sinh_vien" class="form-control">
     <br>
-    Họ sinh viên <input type="text" name="ho_sinh_vien" class="form-control">
-    <br>
+    <!-- Họ sinh viên <input type="text" name="ho_sinh_vien" class="form-control">
+    <br> -->
     Ngày sinh <input type="date" name="ngay_sinh" class="form-control">
     <br>
     Địa chỉ <input type="text" name="dia_chi" class="form-control">

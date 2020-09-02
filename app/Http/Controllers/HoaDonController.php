@@ -29,5 +29,7 @@ class HoaDonController extends Controller
         $hoa_don->so_tien_dong        = $request->get('so_tien_dong');
         $hoa_don->ma_ke_toan          = $request->get('ma_ke_toan');
         $hoa_don->save();
+
+        return redirect()->route('hoa_don.create');
     }
 }

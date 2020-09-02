@@ -15,7 +15,7 @@
     <br>
     Ngày đóng <input type="date" name="ngay_dong" class="form-control" value="<?php echo date("Y-m-d") ?>" disabled>
     <br>
-    Mã kế toán thu <input type="number" name="ma_ke_toan" class="form-control" value="1" disabled>
+    Mã kế toán thu <input type="number" name="ma_ke_toan" class="form-control" value="1">
 
     <br>
     <button class="btn btn-primary">Xử lý</button>

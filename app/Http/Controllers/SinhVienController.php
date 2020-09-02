@@ -14,7 +14,7 @@ class SinhVienController extends Controller
         $ten_sinh_vien = $request->get('ten_sinh_vien');
         $array_sinh_vien = SinhVien::where('ten_sinh_vien', 'like', "%$ten_sinh_vien%")
             ->join('lop', 'lop.ma_lop', 'sinh_vien.ma_lop')
-            ->paginate(2);
+            ->paginate(10);
         $title = 'Xem tất cả Sinh viên';
         return view('sinh_vien.index', compact('array_sinh_vien', 'ten_sinh_vien',  'title'));
     }
@@ -41,6 +41,8 @@ class SinhVienController extends Controller
         $sinh_vien->ma_lop              = $request->get('ma_lop');
         $sinh_vien->thoi_gian_nhap_hoc  = $request->get('thoi_gian_nhap_hoc');
         $sinh_vien->save();
+
+        return redirect()->route('sinh_vien.index');
     }
 
 
@@ -72,5 +74,7 @@ class SinhVienController extends Controller
         $sinh_vien->ma_lop              = $request->get('ma_lop');
         $sinh_vien->thoi_gian_nhap_hoc  = $request->get('thoi_gian_nhap_hoc');
         $sinh_vien->save();
+
+        return redirect()->route('sinh_vien.index'); 
     }
 }

@@ -12,8 +12,8 @@
   <br>
   Tên sinh viên <input type="text" name="ten_sinh_vien" class="form-control">
   <br>
-  Họ sinh viên <input type="text" name="ho_sinh_vien" class="form-control">
-  <br>
+  <!-- Họ sinh viên <input type="text" name="ho_sinh_vien" class="form-control">
+  <br> -->
   Ngày sinh <input type="date" name="ngay_sinh" class="form-control">
   <br>
   Địa chỉ <input type="text" name="dia_chi" class="form-control">
@@ -33,7 +33,7 @@
 
   Mã lớp <input type="text" name="ma_lop" class="form-control">
   <br>
-  Thời gian nhập học <input type="date" name="thoi_gian_nhap_hoc">
+  Thời gian nhập học <input type="date" name="thoi_gian_nhap_hoc" value="<?php echo date("Y-m-d") ?>">
   <br>
   <button class="btn btn-primary">Thêm</button>
 </form>

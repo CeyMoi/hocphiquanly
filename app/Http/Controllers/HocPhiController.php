@@ -28,7 +28,7 @@ class HocPhiController extends Controller
             FROM
             (
             SELECT
-            `sinh_vien`.`ma_sinh_vien`, CONCAT(`ho_sinh_vien`,`ten_sinh_vien`) as name,lop.`ma_lop`, 
+            `sinh_vien`.`ma_sinh_vien`, CONCAT(`ten_sinh_vien`) as name,lop.`ma_lop`, 
             TIMESTAMPDIFF(MONTH, thoi_gian_nhap_hoc, CURDATE()) as so_thang,
             (TIMESTAMPDIFF(MONTH, thoi_gian_nhap_hoc, CURDATE()))*chuong_trinh_dao_tao.hoc_phi_theo_thang as tong_tien_dong,
             lop.ma_khoa,lop.ma_nganh,

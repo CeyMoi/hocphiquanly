@@ -1,26 +1,27 @@
  @extends('layout.master')
- 
+
 
  @section('content')
  <table class="table table-hover">
-     
-         <tr>
-             <th>Mã sinh viên</th>
-             <th>Tên</th>
-             <th>Mã lớp</th>
-             <th>số tháng đã học</th>
-             <th>tổng tiền phải đóng</th>
-             <!-- <th>Mã khóa</th>
-             <th>Mã Ngành</th> -->
-             <th>Học phí phải đóng theo tháng</th>
-             <th>Số tiền đã đóng</th>
-             <th>Tình trạng</th>
-             <th>Thành tiền</th>
-             <th>Nợ/Thừa tháng</th>
 
-         </tr>
-     
-     
+     <tr>
+         <th>Mã sinh viên</th>
+         <th>Tên</th>
+         <!-- <th>Mã lớp</th>
+         <th>Số tháng đã học</th> -->
+         <th>tổng tiền phải đóng</th>
+         <!-- <th>Mã khóa</th>
+             <th>Mã Ngành</th> -->
+         <th>Học phí theo tháng</th>
+         <th>Số tiền đã đóng</th>
+         <th>Tình trạng</th>
+         <th>Nợ/Thừa tháng</th>
+         <th>Thành tiền</th>
+
+
+     </tr>
+
+
      @foreach ($arr_sinh_vien as $each)
 
      <tr>
@@ -33,16 +34,16 @@
              {{$each->name}}
          </td>
 
-         <td>
+         <!-- <td>
              {{$each->ma_lop}}
          </td>
 
          <td>
              {{$each->so_thang}}
-         </td>
+         </td> -->
 
          <td>
-             {{$each->tong_tien_dong}}
+             {{number_format($each->tong_tien_dong)}} VNĐ
          </td>
 
          <!-- <td>
@@ -54,11 +55,11 @@
          </td> -->
 
          <td>
-             {{$each->hoc_phi_theo_thang}}
+             {{number_format($each->hoc_phi_theo_thang)}} VNĐ
          </td>
 
          <td>
-             {{$each->da_dong}}
+             {{number_format($each->da_dong)}} VNĐ
          </td>
 
          <td>
@@ -66,15 +67,22 @@
          </td>
 
          <td>
-             {{$each->tien}}
-         </td>
-
-         <td>
              {{$each->thang}}
          </td>
+         
+         <td>
+             {{number_format($each->tien)}} VNĐ
+         </td>
+
+
      </tr>
      @endforeach
-     
+
 
  </table>
-@endsection
+
+ <a href="{{route('send_mail')}}" class="btn btn-primary" onclick="myFunction()">
+     Send mail
+ </a>
+
+ @endsection

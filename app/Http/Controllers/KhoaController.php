@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Khoa;
-
+use Illuminate\Support\Facades\Redirect;
+use App\Http\Requests\KhoaRequest;
 
 class KhoaController extends Controller
 {
@@ -24,7 +25,7 @@ class KhoaController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(KhoaRequest $request)
     {
         $khoa                       = new Khoa();
         $khoa->ma_khoa              = $request->get('ma_khoa');
@@ -32,6 +33,8 @@ class KhoaController extends Controller
         $khoa->thoi_gian_bat_dau    = $request->get('thoi_gian_bat_dau');
         $khoa->thoi_gian_ket_thuc   = $request->get('thoi_gian_ket_thuc');
         $khoa->save();
+
+        return redirect()->route('khoa.index');
     }
 
 
@@ -49,7 +52,7 @@ class KhoaController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(KhoaRequest $request, $id)
     {
         $khoa                           = Khoa::where('ma_khoa', $id)->first();
 
@@ -57,6 +60,8 @@ class KhoaController extends Controller
         $khoa->thoi_gian_bat_dau        = $request->get('thoi_gian_bat_dau');
         $khoa->thoi_gian_ket_thuc       = $request->get('thoi_gian_ket_thuc');
         $khoa->save();
+
+        return redirect()->route('khoa.index');
     }
 
     public function destroy($id)

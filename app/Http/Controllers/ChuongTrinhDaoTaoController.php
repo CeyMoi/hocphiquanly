@@ -29,6 +29,8 @@ class ChuongTrinhDaoTaoController extends Controller
         $chuong_trinh_dao_tao->ten_nganh            = $request->get('ten_nganh');
         $chuong_trinh_dao_tao->hoc_phi_theo_thang   = $request->get('hoc_phi_theo_thang');
         $chuong_trinh_dao_tao->save();
+
+        return redirect()->route('chuong_trinh_dao_tao.index');
     }
 
 
@@ -52,6 +54,8 @@ class ChuongTrinhDaoTaoController extends Controller
         $chuong_trinh_dao_tao->ten_nganh            = $request->get('ten_nganh');
         $chuong_trinh_dao_tao->hoc_phi_theo_thang   = $request->get('hoc_phi_theo_thang');
         $chuong_trinh_dao_tao->save();
+
+        return redirect()->route('chuong_trinh_dao_tao.index');
     }
 
 

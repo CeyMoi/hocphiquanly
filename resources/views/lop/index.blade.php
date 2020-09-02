@@ -11,6 +11,7 @@
 <a href="{{route('lop.create')}}" class="btn btn-primary">
     Thêm
 </a>
+
 <table class="table table-hover">
     <tr>
         <th>Mã lớp</th>
@@ -20,7 +21,7 @@
 
         <th>Xem</th>
         <th>Sửa</th>
-        <th>Xóa</th>
+        <!-- <th>Xóa</th> -->
     </tr>
 
     @foreach ($array_lop as $lop)
@@ -49,13 +50,13 @@
             <a href="{{ route('lop.edit',['id' => $lop->ma_lop ]) }}" class="btn btn-primary">Sửa</a>
         </td>
 
-        <td>
+        <!-- <td>
             <form action="{{ route('lop.destroy',['id' => $lop->ma_lop ]) }}" method="post">
                 <input type="submit" value="Xóa" class="btn btn-primary">
                 <input type="hidden" name="_method" value="delete">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </form>
-        </td>
+        </td> -->
     </tr>
     @endforeach
 

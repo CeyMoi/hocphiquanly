@@ -24,7 +24,7 @@
 
 		<th>Xem</th>
 		<th>Sửa</th>
-		<th>Xóa</th>
+		<!-- <th>Xóa</th> -->
 	</tr>
 
 	@foreach ($array_khoa as $khoa)
@@ -59,13 +59,13 @@
 			</a>
 		</td>
 
-		<td>
+		<!-- <td>
 			<form action="{{ route('khoa.destroy',['id' => $khoa->ma_khoa ]) }}" method="post">
 				<input type="submit" value="Xóa" class="btn btn-primary">
 				<input type="hidden" name="_method" value="delete">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			</form>
-		</td>
+		</td> -->
 	</tr>
 	@endforeach
 

@@ -25,7 +25,7 @@
 
 		<th>Xem</th>
 		<th>Sửa</th>
-		<th>Xóa</th>
+		<!-- <th>Xóa</th> -->
 	</tr>
 
 
@@ -60,13 +60,13 @@
 			</a>
 		</td>
 
-		<td>
+		<!-- <td>
 			<form action="{{ route('chuong_trinh_dao_tao.destroy',['id' => $chuong_trinh_dao_tao->ma_nganh ]) }}" method="post">
 				<input type="submit" value="Xóa" class="btn btn-primary">
 				<input type="hidden" name="_method" value="delete">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			</form>
-		</td>
+		</td> -->
 	</tr>
 
 	@endforeach
